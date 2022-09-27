@@ -48,6 +48,7 @@ public class JWTUtility  implements Serializable {
         return expiration.before(new Date());
     }
 
+    // genrate token for user
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
         return doGenerateToken(claims, userDetails.getUsername());
